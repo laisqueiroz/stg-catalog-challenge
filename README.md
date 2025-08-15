@@ -50,20 +50,20 @@ Todas as tecnologias escolhidas seguem os requesitos de obrigatoriedade do proje
    git clone https://github.com/laisqueiroz/stg-catalog-challenge
 
 2. **Instale as dependências**
-  ```bash
-  npm install
+   ```bash
+   npm install
 
 3. **Configure as variáveis de ambiente**
   Altere o arquivo .env na raiz com as informações do seu supabase: 
-  ```bash
-  VITE_SUPABASE_URL=seu-url-supabase
-  VITE_SUPABASE_ANON_KEY=sua-chave-anonima
+   ```bash
+   VITE_SUPABASE_URL=seu-url-supabase
+   VITE_SUPABASE_ANON_KEY=sua-chave-anonima
 
 Essas informações você encontra no painel do supabase.
 
 4. **Inicie o servidor de desenvolvimento**
-  ```bash
-  npm run dev
+   ```bash
+   npm run dev
 
 5. **Acesse no navegador**
   http://localhost:5173
