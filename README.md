@@ -74,58 +74,58 @@ Essas informações você encontra no painel do supabase.
 
 Autenticação (Supabase):
 
-✅ Tela de login e registro
-✅ Autenticação via email/senha
-✅ Logout funcional
-✅ Proteção de rotas (usuários não logados não finalizam a compra)
-❌ Recuperação de senha (opcional, mas será um diferencial)
+✅ Tela de login e registro  
+✅ Autenticação via email/senha  
+✅ Logout funcional  
+✅ Proteção de rotas (usuários não logados não finalizam a compra)  
+❌ Recuperação de senha (opcional, mas será um diferencial)  
 
 Catálogo de Produtos:
 
-✅ Listagem de produtos com imagem, nome, preço e descrição
-✅ Busca/filtro por nome do produto
-✅ Visualização detalhada do produto (modal ou página)
-✅ Adicionar produto ao carrinho
-✅ Visualizar carrinho com produtos selecionados
-✅ Interface responsiva (desktop e mobile)
+✅ Listagem de produtos com imagem, nome, preço e descrição  
+✅ Busca/filtro por nome do produto  
+✅ Visualização detalhada do produto (modal ou página)  
+✅ Adicionar produto ao carrinho  
+✅ Visualizar carrinho com produtos selecionados  
+✅ Interface responsiva (mobile, tablet e desktop)  
 
 Finalização via WhatsApp:
 
-✅ Botão "Finalizar Pedido" no carrinho
-✅ Gerar mensagem formatada com os produtos
-✅ Redirecionar para wa.me do link com pedido
-✅ Limpar carrinho após envio
+✅ Botão "Finalizar Pedido" no carrinho  
+✅ Gerar mensagem formatada com os produtos  
+✅ Redirecionar para wa.me do link com pedido  
+✅ Limpar carrinho após envio  
 
 # DIFERENCIAIS (OPCIONAL - PONTOS EXTRAS)
 
 Funcionalidades Bônus:
 
-❌ Histórico de pedidos do usuário
-✅ Filtros avançados (categoria, faixa de preço)
-❌ Sistema de cupons de desconto
-❌ Lista de desejos além do carrinho
-❌ Avaliações e comentários dos produtos
-❌ Dark mode toggle
-❌ PWA (Progressive Web App)
+❌ Histórico de pedidos do usuário  
+✅ Filtros avançados (categoria, faixa de preço)  
+❌ Sistema de cupons de desconto  
+❌ Lista de desejos além do carrinho  
+❌ Avaliações e comentários dos produtos  
+❌ Dark mode toggle  
+❌ PWA (Progressive Web App)  
 
 Técnico:
 
-✅ Context API para gerenciamento de estado global
-✅ Custom hooks bem estruturados
-❌ Testes unitários (Jest/Testing Library)
-❌ Error boundary para tratamento de erros
-❌ SEO otimizado (se Next.js)
-❌ Performance otimizada (lazy loading, memoization)
-❌ Internacionalização (i18n)
+✅ Context API para gerenciamento de estado global  
+✅ Custom hooks bem estruturados  
+❌ Testes unitários (Jest/Testing Library)  
+❌ Error boundary para tratamento de erros  
+❌ SEO otimizado (se Next.js)  
+❌ Performance otimizada (lazy loading, memoization)  
+❌ Internacionalização (i18n)  
 
 UX/UI:
 
-✅ Animações suaves (Framer Motion)
-❌ Skeleton loading durante carregamentos
-❌ Toast notifications para feedback
-❌ Breadcrumbs para navegação
-✅ Infinite scroll ou paginação
-❌ Busca com sugestões/autocomplete
+✅ Animações suaves (Framer Motion)  
+❌ Skeleton loading durante carregamentos  
+❌ Toast notifications para feedback  
+❌ Breadcrumbs para navegação  
+✅ Infinite scroll ou paginação  
+❌ Busca com sugestões/autocomplete  
 
 ### Links 
 
