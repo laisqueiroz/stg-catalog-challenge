@@ -1,69 +1,132 @@
-# React + TypeScript + Vite
+## 📌 Sobre o Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema de e-commerce completo com integração via WhatsApp para finalização de compras. O projeto oferece:
 
-Currently, two official plugins are available:
+- **Catálogo de produtos** com filtros e busca
+- **Carrinho de compras** persistente (local/Supabase)
+- **Checkout via WhatsApp** - envia pedido formatado diretamente para o vendedor
+- **Autenticação segura** via Supabase Auth
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+### Frontend
+| Tecnologia | Justificativa |
+|------------|---------------|
+| React + TypeScript | Tipagem estática e componentes reutilizáveis |
+| Vite | Build tool rápida para desenvolvimento moderno |
+| Tailwind CSS | Estilização utilitária e responsiva |
+| Supabase JS | Backend-as-a-Service (Auth + Database) |
+| React Hook Form | Validação de formulários eficiente |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Backend
+| Tecnologia | Função |
+|------------|--------|
+| Supabase | Banco de dados PostgreSQL + Autenticação |
+| Supabase Storage | Armazenamento de imagens dos produtos |
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Todas as tecnologias escolhidas seguem os requesitos de obrigatoriedade do projeto.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🤖 IA Utilizada
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Ferramenta | Contribuição |
+|------------|--------------|
+| ChatGPT-4 | - Geração de boilerplate<br>- Sugestões de arquitetura<br>- Resolução de bugs complexos<br>- Geração de dados para popular o banco de dados. |
+| Deepseek | - Refatoração de código<br>- Documentação<br>- Sugestões de melhoria de UI |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Divisão de código:**
+- 60% gerado/assistido por IA
+- 40% escrito manualmente (lógica crítica e integrações)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como Rodar o Projeto - Localmente
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Pré-requisitos
+- Node.js v18+
+- Conta no Supabase
+
+### Passo a Passo
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/laisqueiroz/stg-catalog-challenge
+
+2. **Instale as dependências**
+  ```bash
+  npm install
+
+3. **Configure as variáveis de ambiente**
+  Altere o arquivo .env na raiz com as informações do seu supabase: 
+  ```bash
+  VITE_SUPABASE_URL=seu-url-supabase
+  VITE_SUPABASE_ANON_KEY=sua-chave-anonima
+
+Essas informações você encontra no painel do supabase.
+
+4. **Inicie o servidor de desenvolvimento**
+  ```bash
+  npm run dev
+
+5. **Acesse no navegador**
+  http://localhost:5173
+
+### Checklist de Funcionalidades
+
+# FUNCIONALIDADES PRINCIPAIS
+
+Autenticação (Supabase):
+
+✅ Tela de login e registro
+✅ Autenticação via email/senha
+✅ Logout funcional
+✅ Proteção de rotas (usuários não logados não finalizam a compra)
+❌ Recuperação de senha (opcional, mas será um diferencial)
+
+Catálogo de Produtos:
+
+✅ Listagem de produtos com imagem, nome, preço e descrição
+✅ Busca/filtro por nome do produto
+✅ Visualização detalhada do produto (modal ou página)
+✅ Adicionar produto ao carrinho
+✅ Visualizar carrinho com produtos selecionados
+✅ Interface responsiva (desktop e mobile)
+
+Finalização via WhatsApp:
+
+✅ Botão "Finalizar Pedido" no carrinho
+✅ Gerar mensagem formatada com os produtos
+✅ Redirecionar para wa.me do link com pedido
+✅ Limpar carrinho após envio
+
+# DIFERENCIAIS (OPCIONAL - PONTOS EXTRAS)
+
+Funcionalidades Bônus:
+
+❌ Histórico de pedidos do usuário
+✅ Filtros avançados (categoria, faixa de preço)
+❌ Sistema de cupons de desconto
+❌ Lista de desejos além do carrinho
+❌ Avaliações e comentários dos produtos
+❌ Dark mode toggle
+❌ PWA (Progressive Web App)
+
+Técnico:
+
+✅ Context API para gerenciamento de estado global
+✅ Custom hooks bem estruturados
+❌ Testes unitários (Jest/Testing Library)
+❌ Error boundary para tratamento de erros
+❌ SEO otimizado (se Next.js)
+❌ Performance otimizada (lazy loading, memoization)
+❌ Internacionalização (i18n)
+
+UX/UI:
+
+✅ Animações suaves (Framer Motion)
+❌ Skeleton loading durante carregamentos
+❌ Toast notifications para feedback
+❌ Breadcrumbs para navegação
+✅ Infinite scroll ou paginação
+❌ Busca com sugestões/autocomplete
+
+### Links 
+
+Deploy: https://stg-catalog-challenge-x2r0.onrender.com
