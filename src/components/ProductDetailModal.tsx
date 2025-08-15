@@ -68,12 +68,6 @@ export function ProductDetailModal({ product, onClose, onAdd }: Props) {
                 {formatBRL(product.price)}
               </div>
               <div className="text-xs sm:text-sm text-gray-500 mt-1">Preço à vista</div>
-              
-              {product.original_price && (
-                <div className="text-xs sm:text-sm text-gray-400 line-through mt-1">
-                  De: {formatBRL(product.original_price)}
-                </div>
-              )}
             </div>
 
             <div className="mt-6 sm:mt-8 space-y-3">
